@@ -522,8 +522,10 @@ module "kube-hetzner" {
   # dns_servers = []
 
   # When this is enabled, rather than the first node, all external traffic will be routed via a control-plane loadbalancer, allowing for high availability.
-  # The default is false.
+  # The default is false. 
   # use_control_plane_lb = true
+  # Define the type of LB for the control plane load balancer. Default is lb11.
+  # control_lb_type = lb11
 
   # Let's say you are not using the control plane LB solution above, and still want to have one hostname point to all your control-plane nodes.
   # You could create multiple A records of to let's say cp.cluster.my.org pointing to all of your control-plane nodes ips.
